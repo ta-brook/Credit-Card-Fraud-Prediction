@@ -1,0 +1,9 @@
+*.csv
+*.db
+*.json
+
+
+mlruns/
+output/
+models/
+data/
