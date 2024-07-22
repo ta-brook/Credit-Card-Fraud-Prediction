@@ -18,7 +18,7 @@ docker run -d -p 1150:1150 fraud-model-deployment:latest
 ## Run container from Artifact Registry
 
 ```docker
-docker run -d -p 1150:1150 us-central1-docker.pkg.dev/logical-sled-430104-t6/mlops/fraude.predictiont:latest
+docker run -d -p 1150:1150 us-central1-docker.pkg.dev/logical-sled-430104-t6/mlops/fraude.prediction:latest
 ```
 
 ## Test the Deployment

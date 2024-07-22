@@ -1,0 +1,15 @@
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+steps:
+  # Deploy container image to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+    - 'run'
+    - 'deploy'
+    - 'fraud-prediction'
+    - '--image'
+    - 'us-central1-docker.pkg.dev/logical-sled-430104-t6/mlops/fraud.prediction:latest'
+    - '--region'
+    - 'us-central1'
