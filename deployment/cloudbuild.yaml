@@ -4,7 +4,7 @@ options:
 steps:
 # Download the file locally
 - name: gcr.io/cloud-builders/gsutil
-  args: ['cp', 'gs://deployment/dev/model.pkl', 'deployment/model/model.pkl']
+  args: ['cp', 'gs://mlops-test-buckt/deployment/dev/model.pkl', 'deployment/model/model.pkl']
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'us-central1-docker.pkg.dev/logical-sled-430104-t6/mlops/fraude.prediction:latest', '.']
