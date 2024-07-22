@@ -49,7 +49,7 @@ Develop a Predictive Model:
     - [x] Containerization
     - [x] Artifact Registry
     - [x] Cloud Run
-- [] model monitoring 
+- [ ] model monitoring 
     - [] Evidently AI
     - [] Bigquery
     - [] LookerStudio
