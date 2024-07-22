@@ -1,0 +1,17 @@
+steps:
+# Download the file locally
+- name: gcr.io/cloud-builders/gsutil
+  args: ['cp', 'gs://deployment/dev/model.pkl', 'deployment/model/model.pkl']
+# Build the container image
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/logical-sled-430104-t6/mlops/fraude.prediction:latest', '.']
+# # Push the container image to Container Registry
+# - name: 'gcr.io/cloud-builders/docker'
+#   args: ['push', 'gcr.io/PROJECT_ID/IMAGE']
+# # Deploy container image to Cloud Run
+# - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+#   entrypoint: gcloud
+#   args: ['run', 'deploy', 'SERVICE_NAME', '--image', 'gcr.io/PROJECT_ID/IMAGE', '--region', 'SERVICE_REGION']
+
+images:
+- us-central1-docker.pkg.dev/logical-sled-430104-t6/mlops/fraude.prediction:latest
