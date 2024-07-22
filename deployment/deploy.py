@@ -5,7 +5,7 @@ import pandas as pd
 app = Flask(__name__)
 
 # Load the model from the local file
-with open("models/model/model.pkl", "rb") as f:
+with open("model/model.pkl", "rb") as f:
     model = pickle.load(f)
 
 @app.route('/predict', methods=['POST'])

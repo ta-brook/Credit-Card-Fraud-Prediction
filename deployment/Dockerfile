@@ -2,7 +2,7 @@
 FROM python:3.10-slim
 WORKDIR /app
 ADD deployment/deploy.py .
-ADD deploymentmodel model
+ADD deployment/model model
 ADD deploymentrequirements.txt .
 RUN pip install -r requirements.txt
 EXPOSE 1150
