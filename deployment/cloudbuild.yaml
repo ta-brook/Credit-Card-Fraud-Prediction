@@ -1,3 +1,6 @@
+options:
+  logging: CLOUD_LOGGING_ONLY
+
 steps:
 # Download the file locally
 - name: gcr.io/cloud-builders/gsutil
