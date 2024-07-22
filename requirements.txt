@@ -1,2 +1,2 @@
-google-cloud-storage
-pandas
+google-cloud-storage==2.11.0
+pandas==2.0.3

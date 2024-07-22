@@ -2,7 +2,7 @@
 pip install -r requirements.txt
 
 # unzip raw data 
-gzip -d data/raw_card_transdata.csv.gzip data/raw_card_transdata.csv
+gzip -dk data/raw_card_transdata.csv.gzip data/raw_card_transdata.csv
 
 # split data into train and test 
 python utility/split_data.py

@@ -10,6 +10,6 @@ steps:
     - 'deploy'
     - 'fraud-prediction'
     - '--image'
-    - 'us-central1-docker.pkg.dev/logical-sled-430104-t6/mlops/fraud.prediction:latest'
+    - 'us-central1-docker.pkg.dev/credit-card-fraud-mlops/mlops/fraud.prediction:latest'
     - '--region'
     - 'us-central1'

@@ -10,9 +10,11 @@ services:
     volumes:
       - ${PWD}:/home/mlflow/
       - ${PWD}/credentials/:/credentials/
-    environment:
-      - GOOGLE_APPLICATION_CREDENTIALS=/credentials/service-account.json
-      - GOOGLE_CLOUD_PROJECT=logical-sled-430104-t6
+    env_file:
+      - .env
+    # environment:
+    #   - GOOGLE_APPLICATION_CREDENTIALS=/credentials/service-account.json
+    #   - GOOGLE_CLOUD_PROJECT=logical-sled-430104-t6
     networks:
       - app_network
 
@@ -20,6 +22,8 @@ services:
     image: mageai/mageai:latest
     container_name: mage
     command: /app/run_app.sh mage start mage
+    env_file:
+      - .env
     ports:
       - "6789:6789"
     volumes:
@@ -30,12 +34,12 @@ services:
     environment:
       - USER_CODE_PATH=/home/src/mage
       - MLFLOW_TRACKING_URI=http://mlflow:5000
-      - GOOGLE_APPLICATION_CREDENTIALS=credentials/service-account.json
-      - GOOGLE_CLOUD_PROJECT=logical-sled-430104-t6
-      - DATA_SET_BUCKET=credit-card-fraud-prediction-tes
-      - MODEL_REGISTRY_BUCKET=mlops-test-buckt
-      - BIGQUERY_DATASET=model_monitoring
-      - BIGQUERY_TABLE=model_predictions
+      # - GOOGLE_APPLICATION_CREDENTIALS=credentials/service-account.json
+      # - GOOGLE_CLOUD_PROJECT=logical-sled-430104-t6
+      # - DATA_SET_BUCKET=credit-card-fraud-prediction-tes
+      # - MODEL_REGISTRY_BUCKET=mlops-test-buckt
+      # - BIGQUERY_DATASET=model_monitoring
+      # - BIGQUERY_TABLE=model_predictions
     networks:
       - app_network
     depends_on:

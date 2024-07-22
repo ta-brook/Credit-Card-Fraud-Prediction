@@ -49,13 +49,13 @@ blocks:
   language: python
   name: train_model
   retry_config: null
-  status: executed
+  status: failed
   timeout: null
   type: custom
   upstream_blocks:
   - build_dataset
   uuid: train_model
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: teal
   configuration:
     file_source:
@@ -68,13 +68,13 @@ blocks:
   language: python
   name: model_tagging
   retry_config: null
-  status: executed
+  status: failed
   timeout: null
   type: custom
   upstream_blocks:
   - train_model
   uuid: model_tagging
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: yellow
   configuration: {}
   downstream_blocks: []

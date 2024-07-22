@@ -1,8 +1,0 @@
-project_id                     = "logical-sled-430104-t6"
-location                       = "us-central1"
-data_lake_bucket_name          = "credit-card-fraud-prediction-tes"
-artifact_registry_location     = "us-central1"
-artifact_registry_name         = "mlops"
-bigquery_dataset_id            = "model_monitoring"
-bigquery_model_predictions_table = "model_predictions"
-bigquery_model_runtime_table   = "model_runtime"

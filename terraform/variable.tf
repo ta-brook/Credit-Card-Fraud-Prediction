@@ -6,7 +6,6 @@ variable "project_id" {
 variable "location" {
   description = "Google Cloud location"
   type        = string
-  default     = "US"
 }
 
 variable "data_lake_bucket_name" {
@@ -17,7 +16,6 @@ variable "data_lake_bucket_name" {
 variable "artifact_registry_location" {
   description = "Location for the Artifact Registry"
   type        = string
-  default     = "US"
 }
 
 variable "artifact_registry_name" {

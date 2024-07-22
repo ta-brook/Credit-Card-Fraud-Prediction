@@ -100,3 +100,11 @@ resource "google_bigquery_table" "model_runtime" {
     }
   ])
 }
+
+resource "google_storage_bucket" "create_model_registry" {
+  name          = var.model_registry
+  project       = var.project_id
+  location      = var.location
+  storage_class = "STANDARD"
+  uniform_bucket_level_access = true
+}

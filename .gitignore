@@ -10,5 +10,9 @@ models
 data/*
 archive
 mage_data/
+terraform/*
 
+!terraform/main.tf
+!terraform/variable.tf
+!terraform/init.sh
 !data/raw_card_transdata.csv.gz
