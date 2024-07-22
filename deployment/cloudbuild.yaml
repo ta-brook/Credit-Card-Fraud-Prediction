@@ -7,7 +7,9 @@ steps:
   args: ['cp', 'gs://mlops-test-buckt/deployment/dev/model.pkl', 'deployment/model/model.pkl']
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/logical-sled-430104-t6/mlops/fraude.prediction:latest', '.']
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/logical-sled-430104-t6/mlops/fraude.prediction:latest', 
+          '-f', 'deployment/Dockerfile',
+          '.']
 # # Push the container image to Container Registry
 # - name: 'gcr.io/cloud-builders/docker'
 #   args: ['push', 'gcr.io/PROJECT_ID/IMAGE']
