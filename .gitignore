@@ -1,9 +1,14 @@
 *.csv
 *.db
 *.json
+*.drawio
+*.env
 
+mlruns/*
+output
+models
+data/*
+archive
+mage_data/
 
-mlruns/
-output/
-models/
-data/
+!data/raw_card_transdata.csv.gz
