@@ -117,10 +117,10 @@ gcloud auth activate-service-account --key-file=credentials/service-account.json
     4.2 click `connect new Host` -> `GitHub` 
 
     4.3 Fill region `us-central1` and name `Github` then click `Connect` Follow the popup to github account. 
-    <img alt = "image" src = "utility/images/cloudbuild1.png">
+    <img alt = "cloudbuild1" src = "utility/images/cloudbuild1.png">
 
     4.3.1 If You cant find your repository try again and select `install new account` and select repository that you forked
-    <img alt = "image" src = "utility/images/cloudbuild2.png">
+    <img alt = "cloudbuild2" src = "utility/images/cloudbuild2.png">
 
     4.4 Then, click `...` on the right side and select link repository. [Official Document](https://cloud.google.com/build/docs/automating-builds/github/connect-repo-github?generation=2nd-gen#connecting_a_github_host)
 
@@ -148,7 +148,7 @@ gcloud auth activate-service-account --key-file=credentials/service-account.json
     service-account: your new service-account
     ```
 
-    <img alt = "image" src = "utility/images/cloudbuild3.png">
+    <img alt = "cloudbuild3" src = "utility/images/cloudbuild3.png">
 
 5. Prepare dataset
 
@@ -221,7 +221,7 @@ Please change this to your project `us-central1-docker.pkg.dev/<project-id>/mlop
 1. Cloudbuild should create your Cloudrun deployment by now
 
 2. Get your cloudrun URL and place it `mage\custom\predict.py` -> `API_URL`
-<img alt = "image" src = "utility/images/cloudrun.png">
+<img alt = "cloudrun" src = "utility/images/cloudrun.png">
 
 3. Go to `Pipeline` -> `Prediction` -> `Trigger` -> `Run@once`
 
